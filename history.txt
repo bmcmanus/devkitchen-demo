@@ -1,0 +1,143 @@
+    1  ps aux | grep docker
+    2  docker version
+    3  \docker info
+    4  docker ps
+    5  docker search centos
+    6  docker search devkitchen
+    7  docker pull ubuntu:latest
+    8  docker inspect b7cf8f0d9e82
+    9  docker history b7cf8f0d9e82
+   10  docker pull centos:latest
+   11  docker images
+   12  history
+   13  docker images
+   14  cat /etc/issue
+   15  uname -a
+   16  lsb_release -a
+   17  docker --help
+   18  docker run --help | less
+   19  docker run -t -i centos:latest /bin/bash
+   20  docker ps
+   21  docker run -t -i centos:latest /bin/bash
+   22  docker run -t -i ubuntu:latest /bin/bash
+   23  docker search sinatra
+   24  docker pull training/sinatra
+   25  docker run -t -i training/sinatra /bin/bash
+   26  docker images
+   27  docker commit -m "2015-04-23 1900 MDT BJM: Added JSON" -a "BJM" f0f4ab557f95 sinatra-json
+   28  docker commit -m "2015-04-23 1900 MDT BJM: Added JSON" -a "BJM" training/sinatra sinatra-json
+   29  man docker commit
+   30  docker containers
+   31  docker instances
+   32  docker images
+   33  docker ps
+   34  docker run -i -t training/sinatra /bin/bash
+   35  docker run -t -i quack /bin/bash
+   36  docker containers
+   37  docker ps
+   38  docker
+   39  docker images
+   40  docker run -t -i quack /bin/bash
+   41  ls
+   42  nano
+   43  mkdir python
+   44  cd python
+   45  vim Dockerfile
+   46  docker build .
+   47  docker build . -t python
+   48  docker build -t python
+   49  docker build -t python .
+   50  docker images
+   51  docker run -t -i python /bin/bash
+   52  vim Dockerfile
+   53  docker build .
+   54  cat Dockerfile
+   55  vim Dockerfile 
+   56  docker build -t python:latest
+   57  docker build -t python:latest .
+   58  docker build -t python:1.0 .
+   59  docker run -t -i python:1.0 /bin/bash
+   60  ls -lash
+   61  touch helloworld.py
+   62  vim helloworld.py 
+   63  cat helloworld.py 
+   64  ls -lash
+   65  vim Dockerfile 
+   66  cat Dockerfile 
+   67  ls
+   68  cat Dockerfile
+   69  ls
+   70  docker build -t python:1.1 .
+   71  docker run -t -i python:1.1 python3 /helloworld.py
+   72  docker run -t -i python:1.1 /bin/bash
+   73  vim .dockerignore
+   74  docker build -t python:1.2 .
+   75  docker run -t -i python:1.2 ls /
+   76  docker run -d ubuntu:latest /bin/bash -c "while true; do echo DevKitchen; sleep 1; done"
+   77  docker ps
+   78  docker inspect c3fe7ddc995f
+   79  docker ps
+   80  docker inspect c3fe7ddc995f
+   81  docker ps
+   82  docker logs c3fe7ddc995f
+   83  docker logs c3fe7ddc995f | wc -l
+   84  docker logs c3fe7ddc995f
+   85  docker logs c3fe7ddc995f | wc -l
+   86  docker ps
+   87  docker stop c3fe7ddc995f
+   88  docker run -d ubuntu:latest /bin/bash -c "while true; do echo DevKitchen; sleep 1; done"
+   89  docker ps
+   90  docker attach -i -t ca475b822b85 /bin/bash
+   91  docker exec -i -t ca475b822b85 /bin/bash
+   92  docker ps
+   93  docker stop ca475b822b85
+   94  docker run -d -p 80:80 jetsnoc/devkitchen-docker /usr/sbin/nginx
+   95  docker ps
+   96  ifconfig
+   97  docker ps
+   98  ifconfig
+   99  docker logs
+  100  docker ps
+  101  docker logs 0cec7cce33f9
+  102  docker attach 0cec7cce33f9
+  103  docker ps
+  104  docker run -d -p 80:80 jetsnoc/devkitchen-docker /usr/sbin/nginx
+  105  docker ps
+  106  docker inspect d5c1a2346930
+  107  curl -O - http://172.17.0.20
+  108  curl http://172.17.0.20
+  109  docker run -d 81:81 tutum/apache-php
+  110  docker run -d -p 81:81 tutum/apache-php
+  111  docker ps
+  112  curl ifconfig.me
+  113  curl http://172.17.0.20:81
+  114  docker ps
+  115  docker run -d -p 81:80 tutum/apache-php
+  116  docker ps
+  117  docker stop f0dcf00bcfbb
+  118  docker run -d -p 81:80 tutum/apache-php
+  119  docker ps
+  120  curl http://172.17.0.20:81
+  121  curl http://172.17.0.20:80
+  122  docker ps
+  123  docker inspect 7b3463665ce8
+  124  curl http://172.17.0.23
+  125  docker ps
+  126  docker stop d5c1a2346930
+  127  docker stop 7b3463665ce8
+  128  docker run -d --name db training/postgres
+  129  docker run --help
+  130  docker ps
+  131  docker run -d -P --name web --link db:db training/webapp python app.py
+  132  docker ps
+  133  docker inspect de0456725857
+  134  curl http://172.17.0.25
+  135  docker ps
+  136  docker logs de0456725857
+  137  curl http://172.17.0.25:5000/
+  138  docker exec -t -i web /bin/bash
+  139  sudo -s
+  140  history
+  141  ls
+  142  vi history.txt
+  143  history > history.txt
