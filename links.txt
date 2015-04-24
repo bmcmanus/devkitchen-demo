@@ -4,6 +4,9 @@ https://www.youtube.com/watch?v=jCor69OeR0g
 #Docker 
 https://www.youtube.com/watch?v=wW9CAH9nSLs
 
+#Other great resources
+# Docker's tutorials
+# linuxacademy.com has a great tutorial
 docker run -d --name db training/postgres
 docker run -d -P --name web --link db:db training/webapp python app.py
 
